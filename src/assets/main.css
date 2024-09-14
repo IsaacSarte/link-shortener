@@ -12,3 +12,9 @@ body {
     text-align: center;
     margin-top: 60px;
 }
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
