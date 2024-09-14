@@ -1,5 +1,15 @@
 <template>
     <div id="app">
+        <!-- Replace with header component -->
+         <header class="header">
+            <span>Link-ty</span>
+
+            <div class="right-header">
+                <span>About</span>
+                <a href="https://github.com/isaacsarte/link-shortener" target="_blank">Github</a>
+            </div>
+         </header>
+
         <LinkShortener />
     </div>
 </template>
@@ -10,18 +20,7 @@
     export default {
         name: 'App',
         components: {
-        LinkShortener,
+            LinkShortener,
         },
     };
 </script>
-  
-<style>
-    #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
-</style>

@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.right-header a {
+    text-decoration: none;
+}
+
+.shortened-url {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.15rem;
+    width: 90%;
+    background-color: #FE9DF5;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    padding: 0.375rem 0.5rem 0.35rem 0.5rem;
+}
+
+.shortened-url a {
+    opacity: 0.75;
+    color: #0F0F22;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+    font-weight: 600;
+    font-size: 1.25rem;
+}

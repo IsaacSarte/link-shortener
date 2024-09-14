@@ -1,11 +1,16 @@
 <template>
     <div class="link-shortener">
-        <h1>Link Shortener</h1>
-        <input v-model="originalUrl" placeholder="Enter URL" />
-        <button @click="shortenUrl">Shorten</button>
+        <p class="title">Link-ty</p>
+        <p class="description">Make your links shorter!</p>
+
+        <div class="input-container">
+            <input v-model="originalUrl" placeholder="Enter URL" />
+            <button @click="shortenUrl">Short it!</button>
+        </div>
+        
         <div v-if="errorMessage" class="error">{{ errorMessage }}</div>
-        <div v-if="shortenedUrl">
-            <p>Shortened URL: <a :href="shortenedUrl" target="_blank">{{ shortenedUrl }}</a></p>
+        <div v-if="shortenedUrl" class="shortened-url">
+            <a :href="shortenedUrl" target="_blank">{{ shortenedUrl }}</a>
         </div>
     </div>
 </template>
@@ -57,7 +62,7 @@
                         },
                         {
                             headers: {
-                                Authorization: `Bearer 804988f99ec4e3d5a43a80023b8588cbed103328`, // Replace with your Bitly access token
+                                Authorization: `Bearer 804988f99ec4e3d5a43a80023b8588cbed103328`,
                                 'Content-Type': 'application/json',
                             },
                         }
@@ -78,9 +83,46 @@
         max-width: 500px;
         margin: 0 auto;
         text-align: center;
-        padding: 50px;
     }
-    .error {
-        color: red;
+
+    .title {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: -0.0005rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        font-weight: 600;
+        opacity: 0.75;
+    }
+
+    .input-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .link-shortener input {
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 0.375rem 0.5rem 0.35rem 0.5rem;
+        outline: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: none;
+    }
+
+    .link-shortener button {
+        font-size: 1.5rem;
+        padding: 0.375rem 1rem 0.35rem 1rem;
+        background-color: #FE9DF5;
+        font-weight: 600;
+        color: #0F0F22;
+        /* border: none; */
+        cursor: pointer;
+        white-space: nowrap;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 </style>
